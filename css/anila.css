@@ -84,7 +84,9 @@ GENERAL
 /*
 ================================================
 GRIDS
-// see line --- to setting
+// After you set this conditional,
+// make sure to check anila/grid/vars.scss
+// create your own value if you wish.
 ================================================
 */
 /*
@@ -115,21 +117,37 @@ TABLES
 /*
 ================================================
 TYPORGRAPHY
+// After you set this conditional,
+// make sure to check anila/typography/vars.scss
+// create your own value if you wish.
 ================================================
 */
 /*
 ================================================
 WELLS
-// see line --- to setting
+// After you set this conditional,
+// make sure to check anila/wells/vars.scss
+// create your own value if you wish.
 ================================================
 */
-/* ========= GENERAL VALUES ================ */
+/*
+================================================
+VISIBILITY
+// -- no custom value.
+================================================
+*/
 /*------------------------------------*\
     SETTINGS
 \*------------------------------------*/
 /*------------------------------------*\
 		FUNCTIONS
 \*------------------------------------*/
+/* ========= GENERAL VALUES ================ */
+/* ---- SPACING ----- */
+/* ---- BREAK POINT ----- */
+/* ---- TYPOGRAPHY ----- */
+/* ---- COLOR ----- */
+/* ---- POINTER ----- */
 /*------------------------------------*\
     GENERAL MIXIN
 \*------------------------------------*/
@@ -178,29 +196,6 @@ WELLS
     }
 }
 */
-/*------------------------------------*\
-    MEDIA QUERY MIXIN
-
-// Responsive Mixins
-
-$phone-end:     $tablet-start - 1px;
-$tablet-end:    $desktop-start - 1px;
-
-@mixin media-query($media-query) {
-  
-    @if $media-query == phone {
-      @media screen and (min-width: $phone-start) and (max-width: $phone-end) { @content; }
-    }
-
-    @if $media-query == tablet {
-      @media screen and (min-width: $tablet-start) and (max-width: $tablet-end) { @content; }
-    }
-
-    @if $media-query == desktop {
-      @media screen and (min-width: $desktop-start) { @content; }
-    }
-}
-\*------------------------------------*/
 /*! normalize.css v2.1.0 | MIT License | git.io/normalize */
 /* ==========================================================================
    HTML5 display definitions
@@ -566,12 +561,7 @@ label, input, textarea, button, select, option {
 /* grids */
 /*
 ================================================
-GLOBAL GRID SETTINGS
-================================================
-*/
-/*
-================================================
-FOUNDATION GRID SETTINGS
+GRID SETTINGS
 ================================================
 */
 /*
@@ -633,97 +623,6 @@ FOUNDATION GRID MIXIN
   padding-right: 0.9375rem;
   width: 100%;
   float: left; }
-
-@media only screen {
-  .col {
-    position: relative;
-    padding-left: 0.9375rem;
-    padding-right: 0.9375rem;
-    float: left; }
-  .sm-1 {
-    position: relative;
-    width: 8.33333%; }
-  .sm-2 {
-    position: relative;
-    width: 16.66667%; }
-  .sm-3 {
-    position: relative;
-    width: 25%; }
-  .sm-4 {
-    position: relative;
-    width: 33.33333%; }
-  .sm-5 {
-    position: relative;
-    width: 41.66667%; }
-  .sm-6 {
-    position: relative;
-    width: 50%; }
-  .sm-7 {
-    position: relative;
-    width: 58.33333%; }
-  .sm-8 {
-    position: relative;
-    width: 66.66667%; }
-  .sm-9 {
-    position: relative;
-    width: 75%; }
-  .sm-10 {
-    position: relative;
-    width: 83.33333%; }
-  .sm-11 {
-    position: relative;
-    width: 91.66667%; }
-  .sm-12 {
-    position: relative;
-    width: 100%; }
-  .sm-offset-0 {
-    position: relative;
-    margin-left: 0%; }
-  .sm-offset-1 {
-    position: relative;
-    margin-left: 8.33333%; }
-  .sm-offset-2 {
-    position: relative;
-    margin-left: 16.66667%; }
-  .sm-offset-3 {
-    position: relative;
-    margin-left: 25%; }
-  .sm-offset-4 {
-    position: relative;
-    margin-left: 33.33333%; }
-  .sm-offset-5 {
-    position: relative;
-    margin-left: 41.66667%; }
-  .sm-offset-6 {
-    position: relative;
-    margin-left: 50%; }
-  .sm-offset-7 {
-    position: relative;
-    margin-left: 58.33333%; }
-  .sm-offset-8 {
-    position: relative;
-    margin-left: 66.66667%; }
-  .sm-offset-9 {
-    position: relative;
-    margin-left: 75%; }
-  .sm-offset-10 {
-    position: relative;
-    margin-left: 83.33333%; }
-  [class*="col"] + [class*="col"]:last-child {
-    float: right; }
-  [class*="col"] + [class*="col"].end {
-    float: left; }
-  .col.sm-centered {
-    position: relative;
-    margin-left: auto;
-    margin-right: auto;
-    float: none !important; }
-  .col.sm-uncentered {
-    margin-left: 0;
-    margin-right: 0;
-    float: left !important; }
-  .col.sm-uncentered.opposite {
-    float: right !important; } }
 
 @media only screen and (min-width:40.063em) {
   .col {
@@ -1092,9 +991,295 @@ FOUNDATION GRID MIXIN
 /* labels */
 /* media */
 /* navs */
+.side-nav {
+  display: block;
+  margin: 0;
+  padding: 0.875rem 0;
+  list-style-type: none;
+  list-style-position: inside;
+  font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif; }
+  .side-nav li {
+    margin: 0 0 0.4375rem 0;
+    font-size: 0.875rem; }
+    .side-nav li a {
+      display: block;
+      color: #e20816; }
+    .side-nav li.active > a:first-child {
+      color: #4d4d4d;
+      font-weight: normal;
+      font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif; }
+    .side-nav li.divider {
+      border-top: 1px solid;
+      height: 0;
+      padding: 0;
+      list-style: none;
+      border-top-color: #e6e6e6; }
+
 /* panels */
 /* tables */
 /* typography */
+/* Typography resets */
+div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, p, blockquote, th, td {
+  margin: 0;
+  padding: 0;
+  direction: ltr; }
+
+/* Default Link Styles */
+a {
+  color: #e20816;
+  text-decoration: none;
+  line-height: inherit; }
+  a:hover, a:focus {
+    color: #c90714; }
+  a img {
+    border: none; }
+
+/* Default paragraph styles */
+p {
+  font-family: inherit;
+  font-weight: normal;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 1.25rem;
+  text-rendering: optimizeLegibility; }
+  p.lead {
+    font-size: 1.21875rem;
+    line-height: 1.6; }
+  p aside {
+    font-size: 0.875rem;
+    line-height: 1.35;
+    font-style: italic; }
+
+/* Default header styles */
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Raleway", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  color: #222222;
+  text-rendering: optimizeLegibility;
+  margin-top: 0.2rem;
+  margin-bottom: 0.5rem;
+  line-height: 1.4; }
+  h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
+    font-size: 60%;
+    color: #6f6f6f;
+    line-height: 0; }
+
+h1 {
+  font-size: 2.125rem; }
+
+h2 {
+  font-size: 1.6875rem; }
+
+h3 {
+  font-size: 1.375rem; }
+
+h4 {
+  font-size: 1.125rem; }
+
+h5 {
+  font-size: 1.125rem; }
+
+h6 {
+  font-size: 1rem; }
+
+.subheader {
+  line-height: 1.4;
+  color: #6f6f6f;
+  font-weight: 300;
+  margin-top: 0.2rem;
+  margin-bottom: 0.5rem; }
+
+hr {
+  border: solid #dddddd;
+  border-width: 1px 0 0;
+  clear: both;
+  margin: 1.25rem 0 1.1875rem;
+  height: 0; }
+
+/* Helpful Typography Defaults */
+em, i {
+  font-style: italic;
+  line-height: inherit; }
+
+strong, b {
+  font-weight: bold;
+  line-height: inherit; }
+
+small {
+  font-size: 60%;
+  line-height: inherit; }
+
+code {
+  font-family: Consolas, 'Liberation Mono', Courier, monospace;
+  font-weight: bold;
+  color: #bb240d; }
+
+/* Lists */
+ul, ol, dl {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 1.25rem;
+  list-style-position: outside;
+  font-family: inherit; }
+
+ul {
+  margin-left: 1.1rem; }
+  ul.no-bullet {
+    margin-left: 0; }
+    ul.no-bullet li ul, ul.no-bullet li ol {
+      margin-left: 1.25rem;
+      margin-bottom: 0;
+      list-style: none; }
+
+/* Unordered Lists */
+ul li ul, ul li ol {
+  margin-left: 1.25rem;
+  margin-bottom: 0;
+  font-size: 1rem;
+  /* Override nested font-size change */ }
+ul.square li ul, ul.circle li ul, ul.disc li ul {
+  list-style: inherit; }
+ul.square {
+  list-style-type: square;
+  margin-left: 1.1rem; }
+ul.circle {
+  list-style-type: circle;
+  margin-left: 1.1rem; }
+ul.disc {
+  list-style-type: disc;
+  margin-left: 1.1rem; }
+ul.no-bullet {
+  list-style: none; }
+
+/* Ordered Lists */
+ol {
+  margin-left: 1.4rem; }
+  ol li ul, ol li ol {
+    margin-left: 1.25rem;
+    margin-bottom: 0; }
+
+/* Definition Lists */
+dl dt {
+  margin-bottom: 0.3rem;
+  font-weight: bold; }
+dl dd {
+  margin-bottom: 0.75rem; }
+
+/* Abbreviations */
+abbr, acronym {
+  text-transform: uppercase;
+  font-size: 90%;
+  color: #222222;
+  border-bottom: 1px dotted #dddddd;
+  cursor: help; }
+
+abbr {
+  text-transform: none; }
+
+/* Blockquotes */
+blockquote {
+  margin: 0 0 1.25rem;
+  padding: 0.5625rem 1.25rem 0 1.1875rem;
+  border-left: 1px solid #dddddd; }
+  blockquote cite {
+    display: block;
+    font-size: 0.8125rem;
+    color: #555555; }
+    blockquote cite:before {
+      content: "\2014 \0020"; }
+    blockquote cite a, blockquote cite a:visited {
+      color: #555555; }
+
+blockquote, blockquote p {
+  line-height: 1.6;
+  color: #6f6f6f; }
+
+/* Microformats */
+.vcard {
+  display: inline-block;
+  margin: 0 0 1.25rem 0;
+  border: 1px solid #dddddd;
+  padding: 0.625rem 0.75rem; }
+  .vcard li {
+    margin: 0;
+    display: block; }
+  .vcard .fn {
+    font-weight: bold;
+    font-size: 0.9375rem; }
+
+.vevent .summary {
+  font-weight: bold; }
+.vevent abbr {
+  cursor: default;
+  text-decoration: none;
+  font-weight: bold;
+  border: none;
+  padding: 0 0.0625rem; }
+
+@media only screen and (min-width:40.063em) {
+  h1, h2, h3, h4, h5, h6 {
+    line-height: 1.4; }
+  h1 {
+    font-size: 2.75rem; }
+  h2 {
+    font-size: 2.3125rem; }
+  h3 {
+    font-size: 1.6875rem; }
+  h4 {
+    font-size: 1.4375rem; } }
+
+/*
+       * Print styles.
+       *
+       * Inlined to avoid required HTTP connection: www.phpied.com/delay-loading-your-print-css/
+       * Credit to Paul Irish and HTML5 Boilerplate (html5boilerplate.com)
+      */
+.print-only {
+  display: none !important; }
+
+@media print {
+  @page {
+    margin: 0.5cm; }
+
+  * {
+    background: transparent !important;
+    color: black !important;
+    /* Black prints faster: h5bp.com/s */
+    box-shadow: none !important;
+    text-shadow: none !important; }
+  a, a:visited {
+    text-decoration: underline; }
+  a[href]:after {
+    content: " (" attr(href) ")"; }
+  abbr[title]:after {
+    content: " (" attr(title) ")"; }
+  .ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after {
+    content: ""; }
+  pre, blockquote {
+    border: 1px solid #999999;
+    page-break-inside: avoid; }
+  thead {
+    display: table-header-group;
+    /* h5bp.com/t */ }
+  tr, img {
+    page-break-inside: avoid; }
+  img {
+    max-width: 100% !important; }
+  p, h2, h3 {
+    orphans: 3;
+    widows: 3; }
+  h2, h3 {
+    page-break-after: avoid; }
+  .hide-on-print {
+    display: none !important; }
+  .print-only {
+    display: block !important; }
+  .hide-for-print {
+    display: none !important; }
+  .show-for-print {
+    display: inherit !important; } }
+
 /* wells */
 .well {
   min-height: 20px;
@@ -1104,8 +1289,7 @@ FOUNDATION GRID MIXIN
   border: 1px solid #e3e3e3;
   border-radius: 4px; }
   .well blockquote {
-    border-color: #dddddd;
-    border-color: rgba(0, 0, 0, 0.15); }
+    border-color: #dddddd; }
 
 .well-lg {
   padding: 24px;
@@ -1114,3 +1298,492 @@ FOUNDATION GRID MIXIN
 .well-sm {
   padding: 9px;
   border-radius: 3px; }
+
+/* helper */
+/*------------------------------------*\
+    $HELPER
+\*------------------------------------*/
+/**
+ * A series of helper classes to use arbitrarily. Only use a helper class if an
+ * element/component doesn’t already have a class to which you could apply this
+ * styling, e.g. if you need to float `.main-nav` left then add `float:left;` to
+ * that ruleset as opposed to adding the `.float--left` class to the markup.
+ *
+ * A lot of these classes carry `!important` as you will always want them to win
+ * out over other selectors.
+ */
+/**
+ * Add/remove floats
+ */
+/*!
+==================================
+ HELPER
+==================================
+ */
+.flo-r {
+  float: right !important; }
+
+.flo-l {
+  float: left !important; }
+
+.flo-n {
+  float: none !important; }
+
+/**
+ * Text alignment
+ */
+.txt-l {
+  text-align: left !important; }
+
+.txt-c {
+  text-align: center !important; }
+
+.txt-r {
+  text-align: right !important; }
+
+/**
+ * Font weights
+ */
+.wei-l {
+  font-weight: 300 !important; }
+
+.wei-n {
+  font-weight: 400 !important; }
+
+.wei-sb {
+  font-weight: 600 !important; }
+
+/**
+ * Add/remove margins
+ */
+.push {
+  margin: 1rem !important; }
+
+.push--top {
+  margin-top: 1rem !important; }
+
+.push--right {
+  margin-right: 1rem !important; }
+
+.push--bottom {
+  margin-bottom: 1rem !important; }
+
+.push--left {
+  margin-left: 1rem !important; }
+
+.push--ends {
+  margin-top: 1rem !important;
+  margin-bottom: 1rem !important; }
+
+.push--sides {
+  margin-right: 1rem !important;
+  margin-left: 1rem !important; }
+
+.push-half {
+  margin: 0.5rem !important; }
+
+.push-half--top {
+  margin-top: 0.5rem !important; }
+
+.push-half--right {
+  margin-right: 0.5rem !important; }
+
+.push-half--bottom {
+  margin-bottom: 0.5rem !important; }
+
+.push-half--left {
+  margin-left: 0.5rem !important; }
+
+.push-half--ends {
+  margin-top: 0.5rem !important;
+  margin-bottom: 0.5rem !important; }
+
+.push-half--sides {
+  margin-right: 0.5rem !important;
+  margin-left: 0.5rem !important; }
+
+.flush {
+  margin: 0 !important; }
+
+.flush--top {
+  margin-top: 0 !important; }
+
+.flush--right {
+  margin-right: 0 !important; }
+
+.flush--bottom {
+  margin-bottom: 0 !important; }
+
+.flush--left {
+  margin-left: 0 !important; }
+
+.flush--ends {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important; }
+
+.flush--sides {
+  margin-right: 0 !important;
+  margin-left: 0 !important; }
+
+/**
+ * Add/remove paddings
+ */
+.softer {
+  padding: 1rem !important; }
+
+.softer-top {
+  padding-top: 1rem !important; }
+
+.softer-right {
+  padding-right: 1rem !important; }
+
+.softer-bottom {
+  padding-bottom: 1rem !important; }
+
+.softer-left {
+  padding-left: 1rem !important; }
+
+.softer-ends {
+  padding-top: 1rem !important;
+  padding-bottom: 1rem !important; }
+
+.softer-sides {
+  padding-right: 1rem !important;
+  padding-left: 1rem !important; }
+
+.softer-half {
+  padding: 0.5rem !important; }
+
+.softer-half-top {
+  padding-top: 0.5rem !important; }
+
+.softer-half-right {
+  padding-right: 0.5rem !important; }
+
+.softer-half-bottom {
+  padding-bottom: 0.5rem !important; }
+
+.softer-half-left {
+  padding-left: 0.5rem !important; }
+
+.softer-half-ends {
+  padding-top: 0.5rem !important;
+  padding-bottom: 0.5rem !important; }
+
+.softer-half-sides {
+  padding-right: 0.5rem !important;
+  padding-left: 0.5rem !important; }
+
+.harder {
+  padding: 0 !important; }
+
+.harder-top {
+  padding-top: 0 !important; }
+
+.harder-right {
+  padding-right: 0 !important; }
+
+.harder-bottom {
+  padding-bottom: 0 !important; }
+
+.harder-left {
+  padding-left: 0 !important; }
+
+.harder-ends {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important; }
+
+.harder-sides {
+  padding-right: 0 !important;
+  padding-left: 0 !important; }
+
+/**
+ * Pull items full width of `.island` parents.
+ */
+.full-bleed {
+  margin-right: -1rem !important;
+  margin-left: -1rem !important; }
+  .islet .full-bleed {
+    margin-right: -0.5rem !important;
+    margin-left: -0.5rem !important; }
+
+/**
+ * Add a help cursor to any element that gives the user extra information on
+ * `:hover`.
+ */
+.informative {
+  cursor: help !important; }
+
+/**
+ * Mute an object by reducing its opacity.
+ */
+.muted {
+  opacity: 0.5 !important; }
+
+/**
+ * Align items to the right where they imply progression/movement forward, e.g.:
+ *
+   <p class=proceed><a href=#>Read more...</a></p>
+ *
+ */
+.proceed {
+  text-align: right !important; }
+
+/**
+ * Add a right-angled quote to links that imply movement, e.g.:
+ *
+   <a href=# class=go>Read more</a>
+ *
+ */
+.go:after {
+  content: "\00A0" "\00BB" !important; }
+
+/**
+ * Apply capital case to an element (usually a `strong`).
+ */
+.caps {
+  text-transform: uppercase !important; }
+
+/**
+ * Hide content off-screen without resorting to `display:none;`, also provide
+ * breakpoint specific hidden elements.
+@mixin accessibility{
+    border:0!important;
+    clip:rect(0 0 0 0)!important;
+    height:1px!important;
+    margin:-1px!important;
+    overflow:hidden!important;
+    padding:0!important;
+    position: absolute!important;
+    width:1px!important;
+}
+.accessibility,
+.visuallyhidden{
+    @include accessibility;
+}
+@each $state in phone, tablet, desktop{
+  @include media-query(#{$state}){
+    .accessibility--#{$state},
+    .visuallyhidden--#{$state}{
+        @include accessibility;
+    }
+  }
+}
+ */
+/*------------------------------------*\
+    $CLEARFIX
+\*------------------------------------*/
+/**
+ * Micro clearfix, as per: css-101.org/articles/clearfix/latest-new-clearfix-so-far.php
+ * Extend the clearfix class with Sass to avoid the `.cf` class appearing over
+ * and over in your markup.
+ */
+.cf:after {
+  content: "";
+  display: table;
+  clear: both; }
+
+/*------------------------------------*\
+    VISIBILITY
+\*------------------------------------*/
+/* Foundation Visibility HTML Classes */
+.show-sm, .show-sm-only, .show-md-down, .show-lg-down, .hide-md, .hide-md-up, .hide-md-only, .hide-lg, .hide-lg-up, .hide-lg-only, .hide-xl, .hide-xl-up, .hide-xl-only, .hide-xxl-up, .hide-xxl-only {
+  display: inherit !important; }
+
+.hide-sm, .hide-sm-only, .hide-md-down, .show-md, .show-md-up, .show-md-only, .hide-lg-down, .show-lg, .show-lg-up, .show-lg-only, .show-for-xlarge, .show-for-xlarge-up, .show-for-xlarge-only, .show-for-xxlarge-up, .show-for-xxlarge-only {
+  display: none !important; }
+
+/* Specific visibility for tables */
+table.show-sm, table.show-sm-only, table.show-md-down, table.show-lg-down, table.hide-md, table.hide-md-up, table.hide-md-only, table.hide-lg, table.hide-lg-up, table.hide-lg-only, table.hide-xl, table.hide-xl-up, table.hide-xl-only, table.hide-xxl-up, table.hide-xxl-only {
+  display: table; }
+
+thead.show-sm, thead.show-sm-only, thead.show-md-down, thead.show-lg-down, thead.hide-md, thead.hide-md-up, thead.hide-md-only, thead.hide-lg, thead.hide-lg-up, thead.hide-lg-only, thead.hide-xl, thead.hide-xl-up, thead.hide-xl-only, thead.hide-xxl-up, thead.hide-xxl-only {
+  display: table-header-group !important; }
+
+tbody.show-sm, tbody.show-sm-only, tbody.show-md-down, tbody.show-lg-down, tbody.hide-md, tbody.hide-md-up, tbody.hide-md-only, tbody.hide-lg, tbody.hide-lg-up, tbody.hide-lg-only, tbody.hide-xl, tbody.hide-xl-up, tbody.hide-xl-only, tbody.hide-xxl-up, tbody.hide-xxl-only {
+  display: table-row-group !important; }
+
+tr.show-sm, tr.show-sm-only, tr.show-md-down, tr.show-lg-down, tr.hide-md, tr.hide-md-up, tr.hide-md-only, tr.hide-lg, tr.hide-lg-up, tr.hide-lg-only, tr.hide-xl, tr.hide-xl-up, tr.hide-xl-only, tr.hide-xxl-up, tr.hide-xxl-only {
+  display: table-row !important; }
+
+td.show-sm, td.show-sm-only, td.show-md-down td.show-lg-down, td.hide-md, td.hide-md-up, td.hide-lg, td.hide-lg-up, td.hide-xl td.hide-xl-up, td.hide-xxl-up, th.show-sm, th.show-sm-only, th.show-md-down th.show-lg-down, th.hide-md, th.hide-md-up, th.hide-lg, th.hide-lg-up, th.hide-xl th.hide-xl-up, th.hide-xxl-up {
+  display: table-cell !important; }
+
+/* Medium Displays: 641px and up */
+@media only screen and (min-width:40.063em) {
+  /* Specific visibility for tables */
+  .hide-sm, .hide-sm-only, .show-md, .show-md-down, .show-md-up, .show-md-only, .hide-lg, .hide-lg-up, .hide-lg-only, .hide-xl, .hide-xl-up, .hide-xl-only, .hide-xxl-up, .hide-xxl-only {
+    display: inherit !important; }
+  .show-sm, .show-sm-only, .hide-md, .hide-md-down, .hide-md-up, .hide-md-only, .hide-lg-down, .show-lg, .show-lg-up, .show-lg-only, .show-for-xlarge, .show-for-xlarge-up, .show-for-xlarge-only, .show-for-xxlarge-up, .show-for-xxlarge-only {
+    display: none !important; }
+  table.hide-sm, table.hide-sm-only, table.show-md, table.show-md-down, table.show-md-up, table.show-md-only, table.hide-lg, table.hide-lg-up, table.hide-lg-only, table.hide-xl, table.hide-xl-up, table.hide-xl-only, table.hide-xxl-up, table.hide-xxl-only {
+    display: table; }
+  thead.hide-sm, thead.hide-sm-only, thead.show-md, thead.show-md-down, thead.show-md-up, thead.show-md-only, thead.hide-lg, thead.hide-lg-up, thead.hide-lg-only, thead.hide-xl, thead.hide-xl-up, thead.hide-xl-only, thead.hide-xxl-up, thead.hide-xxl-only {
+    display: table-header-group !important; }
+  tbody.hide-sm, tbody.hide-sm-only, tbody.show-md, tbody.show-md-down, tbody.show-md-up, tbody.show-md-only, tbody.hide-lg, tbody.hide-lg-up, tbody.hide-lg-only, tbody.hide-xl, tbody.hide-xl-up, tbody.hide-xl-only, tbody.hide-xxl-up, tbody.hide-xxl-only {
+    display: table-row-group !important; }
+  tr.hide-sm, tr.hide-sm-only, tr.show-md, tr.show-md-down, tr.show-md-up, tr.show-md-only, tr.hide-lg, tr.hide-lg-up, tr.hide-lg-only, tr.hide-xl, tr.hide-xl-up, tr.hide-xl-only, tr.hide-xxl-up, tr.hide-xxl-only {
+    display: table-row !important; }
+  td.hide-sm, td.hide-sm-only, td.show-md, td.show-md-down, td.show-md-up, td.show-md-only, td.hide-lg, td.hide-lg-up, td.hide-lg-only, td.hide-xl, td.hide-xl-up, td.hide-xl-only, td.hide-xxl-up, td.hide-xxl-only, th.hide-sm, th.hide-sm-only, th.show-md, th.show-md-down, th.show-md-up, th.show-md-only, th.hide-lg, th.hide-lg-up, th.hide-lg-only, th.hide-xl, th.hide-xl-up, th.hide-xl-only, th.hide-xxl-up, th.hide-xxl-only {
+    display: table-cell !important; } }
+
+/* Large Displays: 1024px and up */
+@media only screen and (min-width:64.063em) {
+  /* Specific visilbity for tables */
+  .hide-sm, .hide-sm-only, .hide-md, .hide-md-down, .hide-md-only, .show-md-up, .show-lg, .show-lg-up, .show-lg-only, .hide-xl, .hide-xl-up, .hide-xl-only, .hide-xxl-up, .hide-xxl-only {
+    display: inherit !important; }
+  .show-sm-only, .show-md, .show-md-down, .show-md-only, .hide-lg, .hide-lg-up, .hide-lg-only, .show-for-xlarge, .show-for-xlarge-up, .show-for-xlarge-only, .show-for-xxlarge-up, .show-for-xxlarge-only {
+    display: none !important; }
+  table.hide-sm, table.hide-sm-only, table.hide-md, table.hide-md-down, table.hide-md-only, table.show-md-up, table.show-lg, table.show-lg-up, table.show-lg-only, table.hide-xl, table.hide-xl-up, table.hide-xl-only, table.hide-xxl-up, table.hide-xxl-only {
+    display: table; }
+  thead.hide-sm, thead.hide-sm-only, thead.hide-md, thead.hide-md-down, thead.hide-md-only, thead.show-md-up, thead.show-lg, thead.show-lg-up, thead.show-lg-only, thead.hide-xl, thead.hide-xl-up, thead.hide-xl-only, thead.hide-xxl-up, thead.hide-xxl-only {
+    display: table-header-group !important; }
+  tbody.hide-sm, tbody.hide-sm-only, tbody.hide-md, tbody.hide-md-down, tbody.hide-md-only, tbody.show-md-up, tbody.show-lg, tbody.show-lg-up, tbody.show-lg-only, tbody.hide-xl, tbody.hide-xl-up, tbody.hide-xl-only, tbody.hide-xxl-up, tbody.hide-xxl-only {
+    display: table-row-group !important; }
+  tr.hide-sm, tr.hide-sm-only, tr.hide-md, tr.hide-md-down, tr.hide-md-only, tr.show-md-up, tr.show-lg, tr.show-lg-up, tr.show-lg-only, tr.hide-xl, tr.hide-xl-up, tr.hide-xl-only, tr.hide-xxl-up, tr.hide-xxl-only {
+    display: table-row !important; }
+  td.hide-sm, td.hide-sm-only, td.hide-md, td.hide-md-down, td.hide-md-only, td.show-md-up, td.show-lg, td.show-lg-up, td.show-lg-only, td.hide-xl, td.hide-xl-up, td.hide-xl-only, td.hide-xxl-up, td.hide-xxl-only, th.hide-sm, th.hide-sm-only, th.hide-md, th.hide-md-down, th.hide-md-only, th.show-md-up, th.show-lg, th.show-lg-up, th.show-lg-only, th.hide-xl, th.hide-xl-up, th.hide-xl-only, th.hide-xxl-up, th.hide-xxl-only {
+    display: table-cell !important; } }
+
+/* X-Large Displays: 1441 and up */
+@media only screen and (min-width:90.063em) {
+  /* Specific visilbity for tables */
+  .hide-sm, .hide-sm-only, .hide-md, .hide-md-down, .hide-md-only, .show-md-up, .show-lg-up, .show-for-xlarge, .show-for-xlarge-up, .show-for-xlarge-only, .hide-xxl-up, .hide-xxl-only {
+    display: inherit !important; }
+  .show-sm-only, .show-md, .show-md-down, .show-md-only, .show-lg, .show-lg-only, .show-lg-down, .hide-xl, .hide-xl-up, .hide-xl-only, .show-for-xxlarge-up, .show-for-xxlarge-only {
+    display: none !important; }
+  table.hide-sm, table.hide-sm-only, table.hide-md, table.hide-md-down, table.hide-md-only, table.show-md-up, table.show-lg-up, table.show-for-xlarge, table.show-for-xlarge-up, table.show-for-xlarge-only, table.hide-xxl-up, table.hide-xxl-only {
+    display: table; }
+  thead.hide-sm, thead.hide-sm-only, thead.hide-md, thead.hide-md-down, thead.hide-md-only, thead.show-md-up, thead.show-lg-up, thead.show-for-xlarge, thead.show-for-xlarge-up, thead.show-for-xlarge-only, thead.hide-xxl-up, thead.hide-xxl-only {
+    display: table-header-group !important; }
+  tbody.hide-sm, tbody.hide-sm-only, tbody.hide-md, tbody.hide-md-down, tbody.hide-md-only, tbody.show-md-up, tbody.show-lg-up, tbody.show-for-xlarge, tbody.show-for-xlarge-up, tbody.show-for-xlarge-only, tbody.hide-xxl-up, tbody.hide-xxl-only {
+    display: table-row-group !important; }
+  tr.hide-sm, tr.hide-sm-only, tr.hide-md, tr.hide-md-down, tr.hide-md-only, tr.show-md-up, tr.show-lg-up, tr.show-for-xlarge, tr.show-for-xlarge-up, tr.show-for-xlarge-only, tr.hide-xxl-up, tr.hide-xxl-only {
+    display: table-row !important; }
+  td.hide-sm, td.hide-sm-only, td.hide-md, td.hide-md-down, td.hide-md-only, td.show-md-up, td.show-lg-up, td.show-for-xlarge, td.show-for-xlarge-up, td.show-for-xlarge-only, td.hide-xxl-up, td.hide-xxl-only, th.hide-sm, th.hide-sm-only, th.hide-md, th.hide-md-down, th.hide-md-only, th.show-md-up, th.show-lg-up, th.show-for-xlarge, th.show-for-xlarge-up, th.show-for-xlarge-only, th.hide-xxl-up, th.hide-xxl-only {
+    display: table-cell !important; } }
+
+/* XX-Large Displays: 1920 and up */
+@media only screen and (min-width:120.063em) {
+  /* Specific visilbity for tables */
+  .hide-sm, .hide-sm-only, .hide-md, .hide-md-down, .hide-md-only, .show-md-up, .show-lg-up, .show-for-xlarge-up, .show-for-xxlarge-up, .show-for-xxlarge-only {
+    display: inherit !important; }
+  .show-sm-only, .show-md, .show-md-down, .show-md-only, .show-lg, .show-lg-only, .show-lg-down, .hide-xl, .show-for-xlarge-only, .hide-xxl-up, .hide-xxl-only {
+    display: none !important; }
+  table.hide-sm, table.hide-sm-only, table.hide-md, table.hide-md-down, table.hide-md-only, table.show-md-up, table.show-lg-up, table.show-for-xlarge-up, table.show-for-xxlarge-up, table.show-for-xxlarge-only {
+    display: table; }
+  thead.hide-sm, thead.hide-sm-only, thead.hide-md, thead.hide-md-down, thead.hide-md-only, thead.show-md-up, thead.show-lg-up, thead.show-for-xlarge-up, thead.show-for-xxlarge-up, thead.show-for-xxlarge-only {
+    display: table-header-group !important; }
+  tbody.hide-sm, tbody.hide-sm-only, tbody.hide-md, tbody.hide-md-down, tbody.hide-md-only, tbody.show-md-up, tbody.show-lg-up, tbody.show-for-xlarge-up, tbody.show-for-xxlarge-up, tbody.show-for-xxlarge-only {
+    display: table-row-group !important; }
+  tr.hide-sm, tr.hide-sm-only, tr.hide-md, tr.hide-md-down, tr.hide-md-only, tr.show-md-up, tr.show-lg-up, tr.show-for-xlarge-up, tr.show-for-xxlarge-up, tr.show-for-xxlarge-only {
+    display: table-row !important; }
+  td.hide-sm, td.hide-sm-only, td.hide-md, td.hide-md-down, td.hide-md-only, td.show-md-up, td.show-lg-up, td.show-for-xlarge-up, td.show-for-xxlarge-up, td.show-for-xxlarge-only, th.hide-sm, th.hide-sm-only, th.hide-md, th.hide-md-down, th.hide-md-only, th.show-md-up, th.show-lg-up, th.show-for-xlarge-up, th.show-for-xxlarge-up, th.show-for-xxlarge-only {
+    display: table-cell !important; } }
+
+/* Orientation targeting */
+.show-landscape, .hide-portrait {
+  display: inherit !important; }
+
+.hide-landscape, .show-portrait {
+  display: none !important; }
+
+/* Specific visilbity for tables */
+table.hide-landscape, table.show-portrait {
+  display: table; }
+
+thead.hide-landscape, thead.show-portrait {
+  display: table-header-group !important; }
+
+tbody.hide-landscape, tbody.show-portrait {
+  display: table-row-group !important; }
+
+tr.hide-landscape, tr.show-portrait {
+  display: table-row !important; }
+
+td.hide-landscape, td.show-portrait, th.hide-landscape, th.show-portrait {
+  display: table-cell !important; }
+
+@media only screen and (orientation: landscape) {
+  /* Specific visilbity for tables */
+  .show-landscape, .hide-portrait {
+    display: inherit !important; }
+  .hide-landscape, .show-portrait {
+    display: none !important; }
+  table.show-landscape, table.hide-portrait {
+    display: table; }
+  thead.show-landscape, thead.hide-portrait {
+    display: table-header-group !important; }
+  tbody.show-landscape, tbody.hide-portrait {
+    display: table-row-group !important; }
+  tr.show-landscape, tr.hide-portrait {
+    display: table-row !important; }
+  td.show-landscape, td.hide-portrait, th.show-landscape, th.hide-portrait {
+    display: table-cell !important; } }
+
+@media only screen and (orientation: portrait) {
+  /* Specific visilbity for tables */
+  .show-portrait, .hide-landscape {
+    display: inherit !important; }
+  .hide-portrait, .show-landscape {
+    display: none !important; }
+  table.show-portrait, table.hide-landscape {
+    display: table; }
+  thead.show-portrait, thead.hide-landscape {
+    display: table-header-group !important; }
+  tbody.show-portrait, tbody.hide-landscape {
+    display: table-row-group !important; }
+  tr.show-portrait, tr.hide-landscape {
+    display: table-row !important; }
+  td.show-portrait, td.hide-landscape, th.show-portrait, th.hide-landscape {
+    display: table-cell !important; } }
+
+/* Touch-enabled device targeting */
+.show-touch {
+  display: none !important; }
+
+.hide-touch {
+  display: inherit !important; }
+
+.touch .show-touch {
+  display: inherit !important; }
+
+.touch .hide-touch {
+  display: none !important; }
+
+/* Specific visilbity for tables */
+table.hide-touch {
+  display: table; }
+
+.touch table.show-touch {
+  display: table; }
+
+thead.hide-touch {
+  display: table-header-group !important; }
+
+.touch thead.show-touch {
+  display: table-header-group !important; }
+
+tbody.hide-touch {
+  display: table-row-group !important; }
+
+.touch tbody.show-touch {
+  display: table-row-group !important; }
+
+tr.hide-touch {
+  display: table-row !important; }
+
+.touch tr.show-touch {
+  display: table-row !important; }
+
+td.hide-touch {
+  display: table-cell !important; }
+
+.touch td.show-touch {
+  display: table-cell !important; }
+
+th.hide-touch {
+  display: table-cell !important; }
+
+.touch th.show-touch {
+  display: table-cell !important; }
