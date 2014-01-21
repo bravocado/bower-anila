@@ -3709,6 +3709,19 @@ FOUNDATION GRID MIXIN
     border-radius: 1000px; }
 
 /* media */
+img, object, embed {
+  max-width: 100%;
+  height: auto; }
+
+object, embed {
+  height: 100%; }
+
+img {
+  -ms-interpolation-mode: bicubic; }
+
+#map_canvas img, #map_canvas embed, #map_canvas object, .map_canvas img, .map_canvas embed, .map_canvas object {
+  max-width: none !important; }
+
 .media-video {
   position: relative;
   padding-top: 25px ;
@@ -3725,9 +3738,7 @@ FOUNDATION GRID MIXIN
   .media-video iframe, .media-video object, .media-video embed, .media-video video {
     position: absolute;
     top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%; }
+    left: 0; }
 
 /* navs */
 .side-nav {
@@ -4231,6 +4242,19 @@ span.quinary {
   border-radius: 3px; }
 
 /* media */
+img, object, embed {
+  max-width: 100%;
+  height: auto; }
+
+object, embed {
+  height: 100%; }
+
+img {
+  -ms-interpolation-mode: bicubic; }
+
+#map_canvas img, #map_canvas embed, #map_canvas object, .map_canvas img, .map_canvas embed, .map_canvas object {
+  max-width: none !important; }
+
 /* helper */
 /*------------------------------------*\
     $HELPER
