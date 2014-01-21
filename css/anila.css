@@ -29,30 +29,6 @@ GENERAL
 */
 /*
 ================================================
-  ANILA 2.0
-================================================
-*/
-/**
- *
- * LICENSE
- *
- * Copyright 2013 Bravocado a part of Narrada Communications.
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- * http://apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- *
- */
-/*
-================================================
 GENERAL
 ================================================
 */
@@ -1124,17 +1100,106 @@ button.btn:focus {
       .breadcrumbs > *.unavailable:hover, .breadcrumbs > *.unavailable:hover a, .breadcrumbs > *.unavailable:focus, .breadcrumbs > *.unavailable a:focus {
         text-decoration: none;
         color: #999999;
-        cursor: default; }
+        cursor: not-allowed; }
     .breadcrumbs > *:before {
       content: "/";
       color: #aaaaaa;
       margin: 0 12px ;
       margin: 0 0.75rem ;
-      position: relative;
-      top: 1px; }
+      position: relative; }
     .breadcrumbs > *:first-child:before {
       content: " ";
       margin: 0; }
+  .breadcrumbs.primary {
+    background-color: #922790;
+    color: white;
+    border-color: #6a1c68; }
+    .breadcrumbs.primary > *.current {
+      color: inherit; }
+      .breadcrumbs.primary > *.current a {
+        color: inherit; }
+    .breadcrumbs.primary > *:before {
+      color: #421141; }
+    .breadcrumbs.primary > *.unavailable {
+      color: #d04fce; }
+      .breadcrumbs.primary > *.unavailable a {
+        color: #d04fce; }
+      .breadcrumbs.primary > *.unavailable:hover, .breadcrumbs.primary > *.unavailable:hover a, .breadcrumbs.primary > *.unavailable:focus, .breadcrumbs.primary > *.unavailable a:focus {
+        color: #ba32ba; }
+    .breadcrumbs.primary > * a, .breadcrumbs.primary > * span {
+      color: #f0c8f0; }
+  .breadcrumbs.secondary {
+    background-color: #e20816;
+    color: white;
+    border-color: #b10612; }
+    .breadcrumbs.secondary > *.current {
+      color: inherit; }
+      .breadcrumbs.secondary > *.current a {
+        color: inherit; }
+    .breadcrumbs.secondary > *:before {
+      color: #7f050d; }
+    .breadcrumbs.secondary > *.unavailable {
+      color: #f95762; }
+      .breadcrumbs.secondary > *.unavailable a {
+        color: #f95762; }
+      .breadcrumbs.secondary > *.unavailable:hover, .breadcrumbs.secondary > *.unavailable:hover a, .breadcrumbs.secondary > *.unavailable:focus, .breadcrumbs.secondary > *.unavailable a:focus {
+        color: #f72637; }
+    .breadcrumbs.secondary > * a, .breadcrumbs.secondary > * span {
+      color: #feebec; }
+  .breadcrumbs.tertiary {
+    background-color: #21a9ec;
+    color: white;
+    border-color: #118fc9; }
+    .breadcrumbs.tertiary > *.current {
+      color: inherit; }
+      .breadcrumbs.tertiary > *.current a {
+        color: inherit; }
+    .breadcrumbs.tertiary > *:before {
+      color: #0d6d9a; }
+    .breadcrumbs.tertiary > *.unavailable {
+      color: #7fcff4; }
+      .breadcrumbs.tertiary > *.unavailable a {
+        color: #7fcff4; }
+      .breadcrumbs.tertiary > *.unavailable:hover, .breadcrumbs.tertiary > *.unavailable:hover a, .breadcrumbs.tertiary > *.unavailable:focus, .breadcrumbs.tertiary > *.unavailable a:focus {
+        color: #50c0f0; }
+    .breadcrumbs.tertiary > * a, .breadcrumbs.tertiary > * span {
+      color: white; }
+  .breadcrumbs.quaternary {
+    background-color: #85b623;
+    color: white;
+    border-color: #668b1b; }
+    .breadcrumbs.quaternary > *.current {
+      color: inherit; }
+      .breadcrumbs.quaternary > *.current a {
+        color: inherit; }
+    .breadcrumbs.quaternary > *:before {
+      color: #466013; }
+    .breadcrumbs.quaternary > *.unavailable {
+      color: #b5e05f; }
+      .breadcrumbs.quaternary > *.unavailable a {
+        color: #b5e05f; }
+      .breadcrumbs.quaternary > *.unavailable:hover, .breadcrumbs.quaternary > *.unavailable:hover a, .breadcrumbs.quaternary > *.unavailable:focus, .breadcrumbs.quaternary > *.unavailable a:focus {
+        color: #a1d834; }
+    .breadcrumbs.quaternary > * a, .breadcrumbs.quaternary > * span {
+      color: #f0f9df; }
+  .breadcrumbs.quinary {
+    background-color: #f79813;
+    color: white;
+    border-color: #d07907; }
+    .breadcrumbs.quinary > *.current {
+      color: inherit; }
+      .breadcrumbs.quinary > *.current a {
+        color: inherit; }
+    .breadcrumbs.quinary > *:before {
+      color: #9f5c05; }
+    .breadcrumbs.quinary > *.unavailable {
+      color: #fac176; }
+      .breadcrumbs.quinary > *.unavailable a {
+        color: #fac176; }
+      .breadcrumbs.quinary > *.unavailable:hover, .breadcrumbs.quinary > *.unavailable:hover a, .breadcrumbs.quinary > *.unavailable:focus, .breadcrumbs.quinary > *.unavailable a:focus {
+        color: #f8aa45; }
+    .breadcrumbs.quinary > * a, .breadcrumbs.quinary > * span {
+      color: white; }
 
 /* button group */
 button.btn:focus {
@@ -2467,6 +2532,94 @@ FOUNDATION GRID MIXIN
   float: left; }
 
 @media only screen and (min-width:40.063em) {
+  .md-push-1 {
+    position: relative;
+    left: 8.33333%;
+    right: auto; }
+  .md-pull-1 {
+    position: relative;
+    right: 8.33333%;
+    left: auto; }
+  .md-push-2 {
+    position: relative;
+    left: 16.66667%;
+    right: auto; }
+  .md-pull-2 {
+    position: relative;
+    right: 16.66667%;
+    left: auto; }
+  .md-push-3 {
+    position: relative;
+    left: 25%;
+    right: auto; }
+  .md-pull-3 {
+    position: relative;
+    right: 25%;
+    left: auto; }
+  .md-push-4 {
+    position: relative;
+    left: 33.33333%;
+    right: auto; }
+  .md-pull-4 {
+    position: relative;
+    right: 33.33333%;
+    left: auto; }
+  .md-push-5 {
+    position: relative;
+    left: 41.66667%;
+    right: auto; }
+  .md-pull-5 {
+    position: relative;
+    right: 41.66667%;
+    left: auto; }
+  .md-push-6 {
+    position: relative;
+    left: 50%;
+    right: auto; }
+  .md-pull-6 {
+    position: relative;
+    right: 50%;
+    left: auto; }
+  .md-push-7 {
+    position: relative;
+    left: 58.33333%;
+    right: auto; }
+  .md-pull-7 {
+    position: relative;
+    right: 58.33333%;
+    left: auto; }
+  .md-push-8 {
+    position: relative;
+    left: 66.66667%;
+    right: auto; }
+  .md-pull-8 {
+    position: relative;
+    right: 66.66667%;
+    left: auto; }
+  .md-push-9 {
+    position: relative;
+    left: 75%;
+    right: auto; }
+  .md-pull-9 {
+    position: relative;
+    right: 75%;
+    left: auto; }
+  .md-push-10 {
+    position: relative;
+    left: 83.33333%;
+    right: auto; }
+  .md-pull-10 {
+    position: relative;
+    right: 83.33333%;
+    left: auto; }
+  .md-push-11 {
+    position: relative;
+    left: 91.66667%;
+    right: auto; }
+  .md-pull-11 {
+    position: relative;
+    right: 91.66667%;
+    left: auto; }
   .col {
     position: relative;
     padding-left: 15px ;
@@ -2557,9 +2710,185 @@ FOUNDATION GRID MIXIN
     margin-right: 0;
     float: left !important; }
   .col.md-uncentered.opposite {
-    float: right !important; } }
+    float: right !important; }
+  .push-1 {
+    position: relative;
+    left: 8.33333%;
+    right: auto; }
+  .pull-1 {
+    position: relative;
+    right: 8.33333%;
+    left: auto; }
+  .push-2 {
+    position: relative;
+    left: 16.66667%;
+    right: auto; }
+  .pull-2 {
+    position: relative;
+    right: 16.66667%;
+    left: auto; }
+  .push-3 {
+    position: relative;
+    left: 25%;
+    right: auto; }
+  .pull-3 {
+    position: relative;
+    right: 25%;
+    left: auto; }
+  .push-4 {
+    position: relative;
+    left: 33.33333%;
+    right: auto; }
+  .pull-4 {
+    position: relative;
+    right: 33.33333%;
+    left: auto; }
+  .push-5 {
+    position: relative;
+    left: 41.66667%;
+    right: auto; }
+  .pull-5 {
+    position: relative;
+    right: 41.66667%;
+    left: auto; }
+  .push-6 {
+    position: relative;
+    left: 50%;
+    right: auto; }
+  .pull-6 {
+    position: relative;
+    right: 50%;
+    left: auto; }
+  .push-7 {
+    position: relative;
+    left: 58.33333%;
+    right: auto; }
+  .pull-7 {
+    position: relative;
+    right: 58.33333%;
+    left: auto; }
+  .push-8 {
+    position: relative;
+    left: 66.66667%;
+    right: auto; }
+  .pull-8 {
+    position: relative;
+    right: 66.66667%;
+    left: auto; }
+  .push-9 {
+    position: relative;
+    left: 75%;
+    right: auto; }
+  .pull-9 {
+    position: relative;
+    right: 75%;
+    left: auto; }
+  .push-10 {
+    position: relative;
+    left: 83.33333%;
+    right: auto; }
+  .pull-10 {
+    position: relative;
+    right: 83.33333%;
+    left: auto; }
+  .push-11 {
+    position: relative;
+    left: 91.66667%;
+    right: auto; }
+  .pull-11 {
+    position: relative;
+    right: 91.66667%;
+    left: auto; } }
 
 @media only screen and (min-width:64.063em) {
+  .lg-push-1 {
+    position: relative;
+    left: 8.33333%;
+    right: auto; }
+  .lg-pull-1 {
+    position: relative;
+    right: 8.33333%;
+    left: auto; }
+  .lg-push-2 {
+    position: relative;
+    left: 16.66667%;
+    right: auto; }
+  .lg-pull-2 {
+    position: relative;
+    right: 16.66667%;
+    left: auto; }
+  .lg-push-3 {
+    position: relative;
+    left: 25%;
+    right: auto; }
+  .lg-pull-3 {
+    position: relative;
+    right: 25%;
+    left: auto; }
+  .lg-push-4 {
+    position: relative;
+    left: 33.33333%;
+    right: auto; }
+  .lg-pull-4 {
+    position: relative;
+    right: 33.33333%;
+    left: auto; }
+  .lg-push-5 {
+    position: relative;
+    left: 41.66667%;
+    right: auto; }
+  .lg-pull-5 {
+    position: relative;
+    right: 41.66667%;
+    left: auto; }
+  .lg-push-6 {
+    position: relative;
+    left: 50%;
+    right: auto; }
+  .lg-pull-6 {
+    position: relative;
+    right: 50%;
+    left: auto; }
+  .lg-push-7 {
+    position: relative;
+    left: 58.33333%;
+    right: auto; }
+  .lg-pull-7 {
+    position: relative;
+    right: 58.33333%;
+    left: auto; }
+  .lg-push-8 {
+    position: relative;
+    left: 66.66667%;
+    right: auto; }
+  .lg-pull-8 {
+    position: relative;
+    right: 66.66667%;
+    left: auto; }
+  .lg-push-9 {
+    position: relative;
+    left: 75%;
+    right: auto; }
+  .lg-pull-9 {
+    position: relative;
+    right: 75%;
+    left: auto; }
+  .lg-push-10 {
+    position: relative;
+    left: 83.33333%;
+    right: auto; }
+  .lg-pull-10 {
+    position: relative;
+    right: 83.33333%;
+    left: auto; }
+  .lg-push-11 {
+    position: relative;
+    left: 91.66667%;
+    right: auto; }
+  .lg-pull-11 {
+    position: relative;
+    right: 91.66667%;
+    left: auto; }
   .col {
     position: relative;
     padding-left: 15px ;
@@ -2653,6 +2982,94 @@ FOUNDATION GRID MIXIN
     float: right !important; } }
 
 @media only screen and (min-width:90.063em) {
+  .xl-push-1 {
+    position: relative;
+    left: 8.33333%;
+    right: auto; }
+  .xl-pull-1 {
+    position: relative;
+    right: 8.33333%;
+    left: auto; }
+  .xl-push-2 {
+    position: relative;
+    left: 16.66667%;
+    right: auto; }
+  .xl-pull-2 {
+    position: relative;
+    right: 16.66667%;
+    left: auto; }
+  .xl-push-3 {
+    position: relative;
+    left: 25%;
+    right: auto; }
+  .xl-pull-3 {
+    position: relative;
+    right: 25%;
+    left: auto; }
+  .xl-push-4 {
+    position: relative;
+    left: 33.33333%;
+    right: auto; }
+  .xl-pull-4 {
+    position: relative;
+    right: 33.33333%;
+    left: auto; }
+  .xl-push-5 {
+    position: relative;
+    left: 41.66667%;
+    right: auto; }
+  .xl-pull-5 {
+    position: relative;
+    right: 41.66667%;
+    left: auto; }
+  .xl-push-6 {
+    position: relative;
+    left: 50%;
+    right: auto; }
+  .xl-pull-6 {
+    position: relative;
+    right: 50%;
+    left: auto; }
+  .xl-push-7 {
+    position: relative;
+    left: 58.33333%;
+    right: auto; }
+  .xl-pull-7 {
+    position: relative;
+    right: 58.33333%;
+    left: auto; }
+  .xl-push-8 {
+    position: relative;
+    left: 66.66667%;
+    right: auto; }
+  .xl-pull-8 {
+    position: relative;
+    right: 66.66667%;
+    left: auto; }
+  .xl-push-9 {
+    position: relative;
+    left: 75%;
+    right: auto; }
+  .xl-pull-9 {
+    position: relative;
+    right: 75%;
+    left: auto; }
+  .xl-push-10 {
+    position: relative;
+    left: 83.33333%;
+    right: auto; }
+  .xl-pull-10 {
+    position: relative;
+    right: 83.33333%;
+    left: auto; }
+  .xl-push-11 {
+    position: relative;
+    left: 91.66667%;
+    right: auto; }
+  .xl-pull-11 {
+    position: relative;
+    right: 91.66667%;
+    left: auto; }
   .col {
     position: relative;
     padding-left: 15px ;
@@ -2746,6 +3163,94 @@ FOUNDATION GRID MIXIN
     float: right !important; } }
 
 @media only screen and (min-width:120.063em) {
+  .xxl-push-1 {
+    position: relative;
+    left: 8.33333%;
+    right: auto; }
+  .xxl-pull-1 {
+    position: relative;
+    right: 8.33333%;
+    left: auto; }
+  .xxl-push-2 {
+    position: relative;
+    left: 16.66667%;
+    right: auto; }
+  .xxl-pull-2 {
+    position: relative;
+    right: 16.66667%;
+    left: auto; }
+  .xxl-push-3 {
+    position: relative;
+    left: 25%;
+    right: auto; }
+  .xxl-pull-3 {
+    position: relative;
+    right: 25%;
+    left: auto; }
+  .xxl-push-4 {
+    position: relative;
+    left: 33.33333%;
+    right: auto; }
+  .xxl-pull-4 {
+    position: relative;
+    right: 33.33333%;
+    left: auto; }
+  .xxl-push-5 {
+    position: relative;
+    left: 41.66667%;
+    right: auto; }
+  .xxl-pull-5 {
+    position: relative;
+    right: 41.66667%;
+    left: auto; }
+  .xxl-push-6 {
+    position: relative;
+    left: 50%;
+    right: auto; }
+  .xxl-pull-6 {
+    position: relative;
+    right: 50%;
+    left: auto; }
+  .xxl-push-7 {
+    position: relative;
+    left: 58.33333%;
+    right: auto; }
+  .xxl-pull-7 {
+    position: relative;
+    right: 58.33333%;
+    left: auto; }
+  .xxl-push-8 {
+    position: relative;
+    left: 66.66667%;
+    right: auto; }
+  .xxl-pull-8 {
+    position: relative;
+    right: 66.66667%;
+    left: auto; }
+  .xxl-push-9 {
+    position: relative;
+    left: 75%;
+    right: auto; }
+  .xxl-pull-9 {
+    position: relative;
+    right: 75%;
+    left: auto; }
+  .xxl-push-10 {
+    position: relative;
+    left: 83.33333%;
+    right: auto; }
+  .xxl-pull-10 {
+    position: relative;
+    right: 83.33333%;
+    left: auto; }
+  .xxl-push-11 {
+    position: relative;
+    left: 91.66667%;
+    right: auto; }
+  .xxl-pull-11 {
+    position: relative;
+    right: 91.66667%;
+    left: auto; }
   .col {
     position: relative;
     padding-left: 15px ;
@@ -3152,6 +3657,57 @@ FOUNDATION GRID MIXIN
       clear: both; } }
 
 /* labels */
+.label {
+  font-weight: normal;
+  font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  text-align: center;
+  text-decoration: none;
+  line-height: 1;
+  white-space: nowrap;
+  display: inline-block;
+  position: relative;
+  margin-bottom: inherit;
+  padding: 4px 8px 6px ;
+  padding: 0.25rem 0.5rem 0.375rem ;
+  font-size: 12px ;
+  font-size: 0.75rem ;
+  background-color: whitesmoke;
+  color: black; }
+  .label.primary {
+    background-color: #922790;
+    color: white; }
+  .label.secondary {
+    background-color: #e20816;
+    color: white; }
+  .label.tertiary {
+    background-color: #21a9ec;
+    color: white; }
+  .label.quaternary {
+    background-color: #85b623;
+    color: white; }
+  .label.quinary {
+    background-color: #f79813;
+    color: white; }
+  .label.alert {
+    background-color: #f04124;
+    color: white; }
+  .label.success {
+    background-color: #43ac6a;
+    color: white; }
+  .label.info {
+    background-color: #a0d3e8;
+    color: black; }
+  .label.radius {
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -o-border-radius: 5px;
+    border-radius: 5px; }
+  .label.round {
+    -webkit-border-radius: 1000px;
+    -moz-border-radius: 1000px;
+    -o-border-radius: 1000px;
+    border-radius: 1000px; }
+
 /* media */
 .media-video {
   position: relative;
@@ -3207,7 +3763,7 @@ table {
   border: solid 1px #dddddd;
   width: 100%; }
   table thead, table tfoot {
-    background: whitesmoke;
+    background-color: whitesmoke;
     font-weight: bold; }
     table thead tr th, table thead tr td, table tfoot tr th, table tfoot tr td {
       padding: 8px 10px 10px ;
@@ -3230,6 +3786,61 @@ table {
     border: solid 1px #dddddd; }
   table.stripe tr.even, table.stripe tr.alt, table.stripe tr:nth-of-type(even) {
     background: #f9f9f9; }
+  table.primary {
+    border-color: #d04fce; }
+    table.primary thead {
+      background-color: #922790;
+      color: white; }
+    table.primary thead tr th, table.primary thead tr td, table.primary tfoot tr th, table.primary tfoot tr td {
+      color: inherit; }
+    table.primary.bordered thead tr th, table.primary.bordered thead tr td, table.primary.bordered tfoot tr th, table.primary.bordered tfoot tr td, table.primary.bordered tbody tr th, table.primary.bordered tbody tr td {
+      border-color: #d04fce; }
+    table.primary.stripe tr.even, table.primary.stripe tr.alt, table.primary.stripe tr:nth-of-type(even) {
+      background: rgba(146, 39, 144, 0.2); }
+  table.secondary {
+    border-color: #f95762; }
+    table.secondary thead {
+      background-color: #e20816;
+      color: white; }
+    table.secondary thead tr th, table.secondary thead tr td, table.secondary tfoot tr th, table.secondary tfoot tr td {
+      color: inherit; }
+    table.secondary.bordered thead tr th, table.secondary.bordered thead tr td, table.secondary.bordered tfoot tr th, table.secondary.bordered tfoot tr td, table.secondary.bordered tbody tr th, table.secondary.bordered tbody tr td {
+      border-color: #f95762; }
+    table.secondary.stripe tr.even, table.secondary.stripe tr.alt, table.secondary.stripe tr:nth-of-type(even) {
+      background: rgba(226, 8, 22, 0.2); }
+  table.tertiary {
+    border-color: #7fcff4; }
+    table.tertiary thead {
+      background-color: #21a9ec;
+      color: white; }
+    table.tertiary thead tr th, table.tertiary thead tr td, table.tertiary tfoot tr th, table.tertiary tfoot tr td {
+      color: inherit; }
+    table.tertiary.bordered thead tr th, table.tertiary.bordered thead tr td, table.tertiary.bordered tfoot tr th, table.tertiary.bordered tfoot tr td, table.tertiary.bordered tbody tr th, table.tertiary.bordered tbody tr td {
+      border-color: #7fcff4; }
+    table.tertiary.stripe tr.even, table.tertiary.stripe tr.alt, table.tertiary.stripe tr:nth-of-type(even) {
+      background: rgba(33, 169, 236, 0.2); }
+  table.quaternary {
+    border-color: #b5e05f; }
+    table.quaternary thead {
+      background-color: #85b623;
+      color: white; }
+    table.quaternary thead tr th, table.quaternary thead tr td, table.quaternary tfoot tr th, table.quaternary tfoot tr td {
+      color: inherit; }
+    table.quaternary.bordered thead tr th, table.quaternary.bordered thead tr td, table.quaternary.bordered tfoot tr th, table.quaternary.bordered tfoot tr td, table.quaternary.bordered tbody tr th, table.quaternary.bordered tbody tr td {
+      border-color: #b5e05f; }
+    table.quaternary.stripe tr.even, table.quaternary.stripe tr.alt, table.quaternary.stripe tr:nth-of-type(even) {
+      background: rgba(133, 182, 35, 0.2); }
+  table.quinary {
+    border-color: #fac176; }
+    table.quinary thead {
+      background-color: #f79813;
+      color: white; }
+    table.quinary thead tr th, table.quinary thead tr td, table.quinary tfoot tr th, table.quinary tfoot tr td {
+      color: inherit; }
+    table.quinary.bordered thead tr th, table.quinary.bordered thead tr td, table.quinary.bordered tfoot tr th, table.quinary.bordered tfoot tr td, table.quinary.bordered tbody tr th, table.quinary.bordered tbody tr td {
+      border-color: #fac176; }
+    table.quinary.stripe tr.even, table.quinary.stripe tr.alt, table.quinary.stripe tr:nth-of-type(even) {
+      background: rgba(247, 152, 19, 0.2); }
 
 /* typography */
 /* Typography resets */
@@ -3322,8 +3933,8 @@ hr {
   border: solid #dddddd;
   border-width: 1px 0 0;
   clear: both;
-  margin: 19.9375px ;
-  margin: 1.24609rem ;
+  margin: 20px 0 19.9375px ;
+  margin: 1.25rem 0 1.24609rem ;
   height: 0; }
 
 /* Helpful Typography Defaults */
@@ -3421,8 +4032,8 @@ abbr {
 
 /* Blockquotes */
 blockquote {
-  margin: 20px ;
-  margin: 1.25rem ;
+  margin: 0 0 20px ;
+  margin: 0 0 1.25rem ;
   padding: 9px 20px 0 19px ;
   padding: 0.5625rem 1.25rem 0 1.1875rem ;
   border-left: 1px solid #dddddd; }
@@ -3465,6 +4076,17 @@ blockquote, blockquote p {
   border: none;
   padding: 0 1px ;
   padding: 0 0.0625rem ; }
+
+span.primary {
+  color: #922790; }
+span.secondary {
+  color: #e20816; }
+span.tertiary {
+  color: #21a9ec; }
+span.quaternary {
+  color: #85b623; }
+span.quinary {
+  color: #f79813; }
 
 @media only screen and (min-width:40.063em) {
   h1, h2, h3, h4, h5, h6 {
@@ -3533,28 +4155,78 @@ blockquote, blockquote p {
   .show-for-print {
     display: inherit !important; } }
 
+/* typography */
+.inline-list {
+  margin: 0 0 17px 0 ;
+  margin: 0 0 1.0625rem 0 ;
+  margin-left: -22px ;
+  margin-left: -1.375rem ;
+  margin-right: 0 ;
+  margin-right: 0 ;
+  padding: 0 ;
+  padding: 0 ;
+  list-style: none;
+  overflow: hidden; }
+  .inline-list > li {
+    list-style: none;
+    float: left;
+    margin-left: 22px ;
+    margin-left: 1.375rem ;
+    display: block; }
+    .inline-list > li > * {
+      display: block; }
+
 /* wells */
 .well {
   min-height: 20px;
   padding: 19px;
   margin-bottom: 20px;
   background-color: whitesmoke;
-  border: 1px solid #e3e3e3;
+  border: 1px solid;
+  border-color: #e3e3e3;
   border-radius: 5px; }
   .well blockquote {
     border-color: #dddddd; }
+  .well p:last-child, .well ul:last-child, .well ol:last-child, .well dl:last-child {
+    margin-bottom: 0; }
   .well.primary {
-    background-color: #922790; }
+    background-color: #922790;
+    color: white;
+    border-color: #761f74; }
+    .well.primary h1, .well.primary h2, .well.primary h3, .well.primary h4, .well.primary h5, .well.primary h6 {
+      color: inherit; }
   .well.secondary {
-    background-color: #e20816; }
+    background-color: #e20816;
+    color: white;
+    border-color: #c00713; }
+    .well.secondary h1, .well.secondary h2, .well.secondary h3, .well.secondary h4, .well.secondary h5, .well.secondary h6 {
+      color: inherit; }
+  .well.tertiary {
+    background-color: #21a9ec;
+    color: white;
+    border-color: #1299d7; }
+    .well.tertiary h1, .well.tertiary h2, .well.tertiary h3, .well.tertiary h4, .well.tertiary h5, .well.tertiary h6 {
+      color: inherit; }
+  .well.quaternary {
+    background-color: #85b623;
+    color: white;
+    border-color: #6f981d; }
+    .well.quaternary h1, .well.quaternary h2, .well.quaternary h3, .well.quaternary h4, .well.quaternary h5, .well.quaternary h6 {
+      color: inherit; }
+  .well.quinary {
+    background-color: #f79813;
+    color: white;
+    border-color: #df8108; }
+    .well.quinary h1, .well.quinary h2, .well.quinary h3, .well.quinary h4, .well.quinary h5, .well.quinary h6 {
+      color: inherit; }
   .well.transparent {
     background-color: transparent; }
 
-.well-lg {
+.lg {
   padding: 24px;
   border-radius: 15px; }
 
-.well-sm {
+.sm {
   padding: 9px;
   border-radius: 3px; }
 
