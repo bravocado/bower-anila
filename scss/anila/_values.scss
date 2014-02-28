@@ -1,12 +1,12 @@
-/* 
-=================================
-GENERAL VALUES
-=================================
-*/
+// 
+// =================================
+// GENERAL VALUES
+// =================================
+// 
 
 // rem for all unit
 
-$rem-base: 16px !default;
+$rem-base: 17px !default;
 
 
 //
@@ -59,11 +59,17 @@ $half-helper-spacing-unit: $helper-spacing-unit/2 !default;
 // MEDIA QUERIES AVAILABLE VARS
 //
 
-$sm-range: (0em, 40em) !default;
-$md-range: (40.063em, 64em) !default;
-$lg-range: (64.063em, 90em) !default;
-$xl-range: (90.063em, 120em) !default;
-$xxl-range: (120.063em) !default;
+//$sm-range: (0em, 40em) !default;
+//$md-range: (40.063em, 64em) !default;
+//$lg-range: (64.063em, 90em) !default;
+//$xl-range: (90.063em, 120em) !default;
+//$xxl-range: (120.063em) !default;
+
+$sm-range: (0px, 640px) !default;
+$md-range: (641px, 1024px) !default;
+$lg-range: (1025px, 1440px) !default;
+$xl-range: (1441px, 1920px) !default;
+$xxl-range: (1921px) !default;
 
 $screen: "only screen" !default;
 
@@ -86,13 +92,17 @@ $xxl-up: "#{$screen} and (min-width:#{lower-bound($xxl-range)})" !default;
 $xxl-only: "#{$screen} and (min-width:#{lower-bound($xxl-range)}) and (max-width:#{upper-bound($xxl-range)})" !default;
 
 // Legacy
-$small: $md-up;
+$small: $sm-up;
 $medium: $md-up;
 $large: $lg-up;
 
 // Responsive Mixins
 // experiment 1. SASS Map issue.
 @mixin media-query($media) {
+  @if $media == sm {
+    @media #{$sm-up} { @content; }
+  }
+  
   @if $media == md {
   	@media #{$md-up} { @content; }
   }
@@ -138,25 +148,22 @@ $alert-color: #f04124 !default;
 $success-color: #43AC6A !default;
 $warning-color: #f08a24 !default;
 $info-color: #a0d3e8 !default;
+$unavailable-color: #999 !default;
 
 // experimental
-// adding a theme and color for easy update for all components without touching every single variable
-$theme-list:  flat,
-              pretty,
-              shiny,
-              bordered
-              !default;
-
-$color-list:  "primary" $primary-color,
-              "secondary" $secondary-color,
-              "tertiary" $tertiary-color,
-              "quaternary" $quaternary-color,
-              "quinary" $quinary-color
-              !default;
-
 
 // We use this to control whether or not CSS classes come through in the gem files.
 $include-print-styles: true !default;
+
+// experimental
+// in SASS 3.3 we will change it to sass map
+$themes: candy, shiny, bordered !default;
+
+$colors-name: primary, secondary, tertiary, quaternary, quinary !default;
+$colors-define: $primary-color, $secondary-color, $tertiary-color, $quaternary-color, $quinary-color !default;
+
+$extra-colors-name: alert, success, warning, info, disable !default;
+$extra-colors-define: $alert-color, $success-color, $warning-color, $info-color, $unavailable-color !default;
 
 
 //
@@ -171,11 +178,11 @@ $cursor-help-value: help !default;
 $cursor-text-value: text !default;
 
 
-/* 
-=================================
-COMPONENT VALUES
-=================================
-*/
+//  
+// =================================
+// COMPONENT VALUES
+// =================================
+// 
 
 //
 // BUTTON AVAILABLE VARS
@@ -207,9 +214,6 @@ $button-padding-horizontal: 10px !default;
 
 // precomposed
 $base-button-class: btn;
-$button-color-list: $color-list !default;
-$button-style-list: $theme-list !default;
-$button-shape-list: hard, extra-soft, soft, round !default;
 $button-size-list: tn $button-tn, sm $button-sm, md $button-md, lg $button-lg !default;
 
 
@@ -437,7 +441,6 @@ $block-grid-media-queries: true !default;
 //
 
 // We use these to style the labels
-$label-color-list: $color-list !default;
 $label-default-bg: #f5f5f5 !default;
 $label-padding: 4 8 6 !default;
 $label-radius: $border-radius-base !default;
@@ -526,7 +529,6 @@ $table-margin-bottom: 20 !default;
 // BOXY AVAILABLE VARS
 //
 
-$boxy-bg: $color-list !default;
 $boxy-bg-default: #f5f5f5 !default;
 
 // boxy border -- boxy blockqoute border
