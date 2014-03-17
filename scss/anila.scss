@@ -29,18 +29,15 @@
 // ================================================
 // 
 
-// put a functions on top of everything
-// media query values need a lower bound and upper bound to works
-@import "anila/tools/functions";
 
+@import "anila/general/functions";
 @import "anila/conditional";
 @import "anila/values";
+@import "anila/general/mixins";
 
-@import "anila/tools/mixins";
-
-@import "anila/generic/normalize";
-@import "anila/generic/reset";
-@import "anila/generic/debug";
+@import "anila/general/normalize";
+@import "anila/general/reset";
+@import "anila/general/debug";
 
 // extensions
 @import "anila/extensions/yiq-color-contrast";
@@ -48,69 +45,59 @@
 
 
 // themes
-@import "anila/tools/themes";
-
-
-//
-// OBJECTS
-//
+@import "anila/general/themes";
 
 // alerts
-@import "anila/objects/alerts";
+@import "anila/alerts/logic";
 
 // buttons
-@import "anila/objects/buttons";
+@import "anila/buttons/logic";
 
-// split buttons
-@import "anila/objects/split-buttons";
+// buttons
+@import "anila/split-button/logic";
 
 // button group
-@import "anila/objects/button-group";
-
-// labels
-@import "anila/objects/labels";
-
-// navs
-@import "anila/objects/navs";
-
-// boxy
-@import "anila/objects/boxy";
-
-// paginations
-@import "anila/objects/paginations";
-
-
-//
-// COMPONENTS
-//
+@import "anila/button-group/logic";
 
 // breadcrumbs
-@import "anila/components/breadcrumbs";
+@import "anila/breadcrumbs/logic";
 
 // codes
-@import "anila/components/codes";
+@import "anila/codes/logic";
 
 // fonts
-@import "anila/components/anila_font";
+@import "anila/fonts/anila";
 
 // forms
-@import "anila/components/forms";
+@import "anila/forms/logic";
 
 // grids
-@import "anila/components/grids";
+@import "anila/grids/logic";
+
+// labels
+@import "anila/labels/logic";
 
 // media
-@import "anila/components/media";
+@import "anila/media/logic";
+
+// navs
+@import "anila/navs/logic";
 
 // tables
-@import "anila/components/tables";
+@import "anila/tables/logic";
 
-// types
-@import "anila/components/types";
+// typography
+@import "anila/typography/logic";
 
 // inline-list
-@import "anila/components/inline-list";
+@import "anila/inline-list/logic";
+
+// boxy
+@import "anila/boxy/logic";
+
+// pagination
+@import "anila/pagination/logic";
 
 
 // helper
-@import "anila/tools/helper";
+@import "anila/general/helper";
