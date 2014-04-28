@@ -7,7 +7,7 @@
  *
  * LICENSE
  *
- * Copyright 2013 Narrada Communications
+ * Copyright 2014 Narrada Communications
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -407,11 +407,6 @@ label, input, textarea, button, select, option {
    BUTTONS
   ==========================================================================
   */
-button.btn {
-  border: 0; }
-  button.btn:focus {
-    outline: none; }
-
 .btn {
   display: inline-block;
   margin-bottom: 0;
@@ -880,6 +875,11 @@ button.btn {
     -webkit-border-radius: 500px;
     -moz-border-radius: 500px;
     border-radius: 500px; }
+
+button {
+  border: 0; }
+  button:focus {
+    outline: none; }
 
 /*
 ==========================================================================
@@ -2831,7 +2831,6 @@ label.error {
 /*
 ================================================
 GRID SYSTEM
-thx to Zurb Foundation
 ================================================
 */
 .row {
