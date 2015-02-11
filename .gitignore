@@ -49,3 +49,4 @@ node_modules/*
 # misc #
 ######################
 config.codekit
+npm-debug.log
