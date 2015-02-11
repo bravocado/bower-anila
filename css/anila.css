@@ -23,6 +23,39 @@
  * limitations under the License.
  *
  */
+/*===============================
+=            GENERAL            =
+===============================*/
+/*-----  End of GENERAL  ------*/
+/*======================================
+=            GENERAL VALUES            =
+======================================*/
+/*==========  GENERAL HTML VARS  ==========*/
+/*==========  BORDER RADIUS VARS  ==========*/
+/*==========  HELPER AVAILABLE VARS  ==========*/
+/*==========  MEDIA QUERIES VARS  ==========*/
+/*==========  COLOR VARS  ==========*/
+/*==========  THEME VARS  ==========*/
+/*==========  POINTER VARS  ==========*/
+/*-----  End of GENERAL VALUES  ------*/
+/*========================================
+=            COMPONENT VALUES            =
+========================================*/
+/*==========  BUTTON VARS  ==========*/
+/*==========  BUTTON GROUP VARS  ==========*/
+/*==========  SPLIT BUTTON VARS  ==========*/
+/*==========  BREADCRUMB VARS  ==========*/
+/*==========  FORM VARS  ==========*/
+/*==========  GRID VARS  ==========*/
+/*==========  LABEL VARS  ==========*/
+/*==========  MEDIA VARS  ==========*/
+/*==========  SIDE NAV VARS  ==========*/
+/*==========  TABLE VARS  ==========*/
+/*==========  TYPOGRAPHY VARS  ==========*/
+/*==========  PAGINATION VARS  ==========*/
+/*==========  INLINE LIST VARS  ==========*/
+/*==========  BOXY VARS  ==========*/
+/*-----  End of COMPONENT VALUES  ------*/
 /* ---------
     BOX SIZING!
     ------------ */
@@ -48,8 +81,8 @@
 */
 /*! normalize.css v2.1.0 | MIT License | git.io/normalize */
 /* ==========================================================================
-   HTML5 display definitions
-   ========================================================================== */
+	 HTML5 display definitions
+	 ========================================================================== */
 /*
  * Correct `block` display not defined in IE 8/9.
  */
@@ -77,8 +110,8 @@ audio:not([controls]) {
   display: none; }
 
 /* ==========================================================================
-   Base
-   ========================================================================== */
+	 Base
+	 ========================================================================== */
 /*
  * 1. Set default font family to sans-serif.
  * 2. Prevent iOS text size adjust after orientation change, without disabling
@@ -99,8 +132,8 @@ body {
   margin: 0; }
 
 /* ==========================================================================
-   Links
-   ========================================================================== */
+	 Links
+	 ========================================================================== */
 /*
  * Address `outline` inconsistency between Chrome and other browsers.
  */
@@ -114,8 +147,8 @@ a:active, a:hover {
   outline: 0; }
 
 /* ==========================================================================
-   Typography
-   ========================================================================== */
+	 Typography
+	 ========================================================================== */
 /*
  * Address variable `h1` font-size and margin within `section` and `article`
  * contexts in Firefox 4+, Safari 5, and Chrome.
@@ -198,8 +231,8 @@ sub {
   bottom: -0.25em; }
 
 /* ==========================================================================
-   Embedded content
-   ========================================================================== */
+	 Embedded content
+	 ========================================================================== */
 /*
  * Remove border when inside `a` element in IE 8/9.
  */
@@ -213,8 +246,8 @@ svg:not(:root) {
   overflow: hidden; }
 
 /* ==========================================================================
-   Figures
-   ========================================================================== */
+	 Figures
+	 ========================================================================== */
 /*
  * Address margin not present in IE 8/9 and Safari 5.
  */
@@ -222,8 +255,8 @@ figure {
   margin: 0; }
 
 /* ==========================================================================
-   Forms
-   ========================================================================== */
+	 Forms
+	 ========================================================================== */
 /*
  * Define consistent border, margin, and padding.
  */
@@ -338,8 +371,8 @@ textarea {
   /* 2 */ }
 
 /* ==========================================================================
-   Tables
-   ========================================================================== */
+	 Tables
+	 ========================================================================== */
 /*
  * Remove most spacing between table cells.
  */
@@ -348,15 +381,15 @@ table {
   border-spacing: 0; }
 
 /*------------------------------------*\
-    $RESET
+	$RESET
 \*------------------------------------*/
 /**
  * A more considered reset; more of a restart...
  * As per: csswizardry.com/2011/10/reset-restarted
  */
 /**
-    * Let’s make the box model all nice, shall we...?
-    */
+	* Let’s make the box model all nice, shall we...?
+	*/
 *, *:before, *:after {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -4229,6 +4262,9 @@ img, object, embed {
   max-width: 100%;
   height: auto; }
 
+img {
+  vertical-align: bottom; }
+
 object, embed {
   height: 100%; }
 
@@ -4573,8 +4609,11 @@ em, i {
   line-height: inherit; }
 
 strong, b {
-  font-weight: bold;
+  font-weight: 700;
   line-height: inherit; }
+
+.light {
+  font-weight: 300; }
 
 small {
   font-size: 60%;
