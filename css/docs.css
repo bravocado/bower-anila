@@ -70,8 +70,52 @@ body {
 .docs-header {
   background-color: #922790;
   color: #fff;
-  padding: 10px ;
-  padding: 0.55556rem ; }
+  padding: 10px 20px ;
+  padding: 0.55556rem 1.11111rem ;
+  *zoom: 1; }
+  .docs-header:before, .docs-header:after {
+    display: table;
+    content: "";
+    line-height: 0; }
+  .docs-header:after {
+    clear: both; }
+  .docs-header .logo {
+    float: left;
+    color: inherit;
+    text-transform: uppercase; }
+  .docs-header nav {
+    float: right;
+    padding-top: 20px ;
+    padding-top: 1.11111rem ; }
+    .docs-header nav li {
+      display: inline-block;
+      margin: 0 10px ;
+      margin: 0 0.55556rem ; }
+      .docs-header nav li:last-child {
+        margin: 0 0; }
+      .docs-header nav li a {
+        color: inherit; }
+
+footer {
+  background-color: #922790;
+  color: #fff;
+  padding: 10px 20px ;
+  padding: 0.55556rem 1.11111rem ; }
+  footer p {
+    margin-bottom: 0; }
+
+.sidenav {
+  background-color: #f5f5f5;
+  color: #000;
+  padding: 20px ;
+  padding: 1.11111rem ; }
+  .sidenav li {
+    margin: 5px 0 ;
+    margin: 0.27778rem 0 ; }
+
+.docs-content {
+  padding: 20px 0 ;
+  padding: 1.11111rem 0 ; }
 
 /*-----  End of DOCUMENTATION SCSS  ------*/
 
